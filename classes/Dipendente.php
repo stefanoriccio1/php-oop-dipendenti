@@ -1,52 +1,28 @@
-<!-- azienda ecommerce di vini piccole/medie dimensioni con consegna a domicilio -->
-
-<!-- Dipendente
-
-  Id
-  Nome
-  Cognome
-  Età
-  Data di nascita
-  CF
-  Stipendio
-  Reparto
-  __construct(nome, cognome, eta, dataNascita, cf, stipendio, reparto)
-
-
-RepartoMarketing
-
-
-
-
-RepartoCommerciale
-
-RepartoCustomerService
-
-RepartoAmministrativo
-
-RepartoDev
-
-BusinessDevelopment
-
-CEO -->
-
 <?php
-  require_once __DIR__ . '/../traits/GetBudget.php'
+  require_once __DIR__ . '/../traits/GetBudget.php';
 
   class Dipendente {
 
-    private $id;
-    private $nome;
-    private $cognome;
-    private $eta;
-    Id
-    Nome
-    Cognome
-    Età
-    Data di nascita
-    CF
-    Stipendio
-    Reparto
+    public $id;
+    public $nome;
+    public $cognome;
+    public $eta;
+    public $dataNascita;
+    public $cf;
+    public $stipendio;
+    public $reparto;
+
+      function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
+
+          $this->nome = $_nome;
+          $this->cognome = $cognome;
+          $this->dataNascita = $dataNascita;
+          $this->cf = $cf;
+          $this->reparto = $reparto;
+
+      }
   }
+
+  echo(Dipendente);
 
 ?>

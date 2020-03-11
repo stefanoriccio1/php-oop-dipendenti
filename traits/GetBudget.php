@@ -1,6 +1,6 @@
 <?php
   trait GetBudget{
-    private $budget
+    private $budget;
 
     private function budget(){
 
