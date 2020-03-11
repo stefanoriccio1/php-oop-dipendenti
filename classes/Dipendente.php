@@ -14,17 +14,22 @@ Dipendente
 
 
 RepartoMarketing
-  
 
 
-Reparto Commerciale
 
-Reparto Customer Service
+RepartoCommerciale
 
-Reparto Amministrativo
+RepartoCustomerService
 
-Reparto Sviluppo(dev)
+RepartoAmministrativo
 
-Business Development
+RepartoDev
+
+BusinessDevelopment
 
 CEO
+
+<?php
+  require_once __DIR__ . '/../traits/GetBudget.php'
+
+?>
