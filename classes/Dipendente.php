@@ -1,6 +1,6 @@
 <!-- azienda ecommerce di vini piccole/medie dimensioni con consegna a domicilio -->
 
-Dipendente
+<!-- Dipendente
 
   Id
   Nome
@@ -17,6 +17,7 @@ RepartoMarketing
 
 
 
+
 RepartoCommerciale
 
 RepartoCustomerService
@@ -27,10 +28,25 @@ RepartoDev
 
 BusinessDevelopment
 
-CEO
+CEO -->
 
 <?php
   require_once __DIR__ . '/../traits/GetBudget.php'
 
+  class Dipendente {
+
+    private $id;
+    private $nome;
+    private $cognome;
+    private $eta;
+    Id
+    Nome
+    Cognome
+    Età
+    Data di nascita
+    CF
+    Stipendio
+    Reparto
+  }
 
 ?>
