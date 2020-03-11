@@ -9,9 +9,12 @@ Dipendente
   Data di nascita
   CF
   Stipendio
+  Reparto
 
 
 Reparto Marketing/Eventi
+
+
 
 Reparto Commerciale
 
