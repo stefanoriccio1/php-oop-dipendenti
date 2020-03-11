@@ -1,4 +1,4 @@
-<!-- azienda ecommerce di vini piccole/medie dimensioni -->
+<!-- azienda ecommerce di vini piccole/medie dimensioni con consegna a domicilio -->
 
 Dipendente
 
@@ -19,6 +19,8 @@ Reparto Customer Service
 
 Reparto Amministrativo
 
-Reparto Sviluppo
+Reparto Sviluppo(dev)
+
+Business Development
 
 CEO
