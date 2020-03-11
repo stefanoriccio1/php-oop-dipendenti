@@ -10,10 +10,11 @@ Dipendente
   CF
   Stipendio
   Reparto
+  __construct(nome, cognome, eta, dataNascita, cf, stipendio, reparto)
 
 
-Reparto Marketing/Eventi
-
+RepartoMarketing
+  
 
 
 Reparto Commerciale
