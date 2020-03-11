@@ -15,10 +15,10 @@
       function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
 
           $this->nome = $_nome;
-          $this->cognome = $cognome;
-          $this->dataNascita = $dataNascita;
-          $this->cf = $cf;
-          $this->reparto = $reparto;
+          $this->cognome = $_cognome;
+          $this->dataNascita = $_dataNascita;
+          $this->cf = $_cf;
+          $this->reparto = $_reparto;
 
       }
   }
