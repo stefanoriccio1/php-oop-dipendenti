@@ -9,7 +9,7 @@
     protected $eta;
     protected $dataNascita;
     protected $cf;
-    private $stipendio;
+    protected $stipendio;
     protected $reparto;
 
       public function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
@@ -70,5 +70,6 @@
         return $this->stipendio;
       }
   }
+
 
 ?>
