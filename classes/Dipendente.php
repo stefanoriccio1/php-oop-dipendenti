@@ -1,5 +1,6 @@
 <?php
   require_once __DIR__ . '/../traits/GetBudget.php';
+  
 
   class Dipendente {
 
@@ -59,7 +60,7 @@
         $this->eta = $_eta;
       }
 
-      public function getEta(){
+      public function calcEta(){
         return $this->eta;
       }
 
