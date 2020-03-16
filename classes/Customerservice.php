@@ -8,8 +8,24 @@
     protected $livello;
     protected $bonus;
 
-    public function setTool($_toolConosciuti){
-      $this->toolConosciuti = $_toolConosciuti;
+    public function _construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto, $_toolConosciuti, $_livello){
+
+      parent::construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto)
+    }
+
+    public function setTool($_toolConosciuti ){
+      if(empty($_toolConosciuti) || preg_match('/^([^0-9]+)$/', $_nome)== 0){
+
+        throw new Exception('inserisci il tool correttamente e solo in lettere');
+
+      }
+      else{
+        $this->toolConosciuti = $_toolConosciuti;
+      }
+    }
+    public function getTool(){
+
+      return $this->toolConosciuti;
     }
 
     public function setLivello($_livello){
@@ -34,10 +50,10 @@
     }
   }
   $rossi = new Customerservice ('Mario', 'Rossi', '15-05-1987','GHHSKM87N15H879U', 'Customer Service');
+  $rossi->setLivello('middle');
   $rossi->calcStipendio(24, 87);
   $rossi->setEta(32);
   $rossi->setTool('Olark'.','.' Zendesk');
-  $rossi->setLivello('middle');
   var_dump($rossi);
 
 ?>
