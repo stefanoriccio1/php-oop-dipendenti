@@ -8,7 +8,7 @@
     protected $livello;
     protected $bonus;
 
-    public function _construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto, $_toolConosciuti){
+    public function _construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
 
       parent::construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto);
       $this->toolConosciuti = $_toolConosciuti;
@@ -48,13 +48,14 @@
     public function calcStipendio($_gg, $_prezzoBase){
 
       $this->stipendio = $_gg * $_prezzoBase * $this->bonus;
+      $this->gg = $_gg;
     }
   }
-  $rossi = new Customerservice ('Mario', 'Rossi', '15-05-1987','GHHSKM87N15H879U', 'Customer Service');
-  $rossi->setLivello('middle');
-  $rossi->calcStipendio(24, 87);
-  $rossi->setEta(32);
-  $rossi->setTool('Olark'.','.' Zendesk');
-  var_dump($rossi);
+  // $rossi = new Customerservice ('Mario', 'Rossi', '15-05-1987','GHHSKM87N15H879U', 'Customer Service');
+  // $rossi->setLivello('middle');
+  // $rossi->calcStipendio(24, 87);
+  // $rossi->setEta(32);
+  // $rossi->setTool('Olark'.','.' Zendesk');
+  // var_dump($rossi);
 
 ?>

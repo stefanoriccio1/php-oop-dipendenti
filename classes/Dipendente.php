@@ -13,6 +13,7 @@
     protected $stipendio;
     protected $reparto;
     protected $titoloStudio;
+    protected $gg;
 
       public function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
 
@@ -77,6 +78,7 @@
       public function calcStipendio($_gg, $_prezzoBase){
 
         $this->stipendio = $_gg * $_prezzoBase;
+        $this->gg = $_gg;
       }
 
       public function getStipendio(){
