@@ -8,13 +8,14 @@
     protected $livello;
     protected $bonus;
 
-    public function _construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto, $_toolConosciuti, $_livello){
+    public function _construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto, $_toolConosciuti){
 
-      parent::construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto)
+      parent::construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto);
+      $this->toolConosciuti = $_toolConosciuti;
     }
 
     public function setTool($_toolConosciuti ){
-      if(empty($_toolConosciuti) || preg_match('/^([^0-9]+)$/', $_nome)== 0){
+      if(empty($_toolConosciuti) || preg_match('/^([^0-9]+)$/', $_toolConosciuti)== 0){
 
         throw new Exception('inserisci il tool correttamente e solo in lettere');
 

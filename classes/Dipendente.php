@@ -1,6 +1,6 @@
 <?php
   require_once __DIR__ . '/../traits/GetBudget.php';
-  
+
 
   class Dipendente {
 
@@ -12,6 +12,7 @@
     protected $cf;
     protected $stipendio;
     protected $reparto;
+    protected $titoloStudio;
 
       public function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
 
@@ -60,8 +61,17 @@
         $this->eta = $_eta;
       }
 
-      public function calcEta(){
+      public function getEta(){
         return $this->eta;
+      }
+
+      public function setStudio($_titoloStudio){
+        // fai check su dato
+        $this->titoloStudio = $_titoloStudio;
+      }
+
+      public function getStudio(){
+        return $this->titoloStudio;
       }
 
       public function calcStipendio($_gg, $_prezzoBase){
