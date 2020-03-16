@@ -15,30 +15,32 @@
       public function __construct($_nome, $_cognome, $_dataNascita, $_cf, $_reparto){
 
 
-          $this->cognome = $_cognome;
+
           $this->dataNascita = $_dataNascita;
           $this->cf = $_cf;
-          $this->reparto = $_reparto;
 
-          if(empty($_nome) || !is_string($_nome) || strlen($_nome) < 3){
-            throw new Exception ('inserisci il nome correttamente e solo in lettere');
+
+          if(preg_match('/^([^0-9]+)$/', $_nome) == 0 || strlen($_nome) < 3){
+            throw new Exception('inserisci il nome correttamente e solo in lettere');
           }
           else{
             $this->nome = $_nome;
           }
-          if(empty($_cognome) || !is_string($_cognome)){
+          if(empty($_cognome) || preg_match('/^([^0-9]+)$/', $_nome)== 0){
 
-            die('inserisci il conome correttamente e solo in lettere');
-
-          }
-          if(empty($_reparto) || !is_string($_reparto)){
-
-            die('inserisci il reparto correttamente e solo in lettere');
+            throw new Exception('inserisci il cognome correttamente e solo in lettere');
 
           }
-          if(empty($_date) || !is_string($_nome)){
+          else{
+            $this->cognome = $_cognome;
+          }
+          if(empty($_reparto) || preg_match('/^([^0-9]+)$/', $_nome)== 0){
 
-            die('inserisci il nome correttamente e solo in lettere');
+            throw new Exception('inserisci il reparto correttamente e solo in lettere');
+
+          }
+          else {
+            $this->reparto = $_reparto;
           }
 
       }
