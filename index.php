@@ -15,6 +15,10 @@ require_once __DIR__ . '/classes/Amministrazione.php';
   $rossi->setTool('Olark'.','.' Zendesk');
   var_dump($rossi);
 
-
+  $bianchi = new Amministrazione('Andrea', 'Bianchi', '21-06-1985', 'DHGDJHGDKHYS687', 'Amministrazione');
+  $bianchi->calcStipendio(24, 98);
+  $bianchi->calcBuoniPasto();
+  $bianchi->setEta(33);
+  var_dump($bianchi);
 
 ?>

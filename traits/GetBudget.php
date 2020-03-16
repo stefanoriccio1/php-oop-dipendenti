@@ -1,8 +1,8 @@
 <?php
   trait GetBudget{
-    private $budget;
+    protected $budget;
 
-    private function budget(){
+    public function budget(){
 
       return $this->budget;
     }
